@@ -1,5 +1,4 @@
 const orm = require("../config/orm");
-const _ = require("lodash")
 // Helper function for handlebars
 const inc = (value) => {
   return value + 1;
