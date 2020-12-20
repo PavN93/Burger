@@ -5,4 +5,6 @@ INSERT INTO burgers (burger_name, devoured)
   ("Beef burger", false),
   ("Chicken burger", false),
   ("Cheeseburger", false),
-  ("VEGAN burger (your own risk)", false);
+  ("VEGAN burger", false),
+  ("Super burger", true),
+  ("Burger and fries", true);

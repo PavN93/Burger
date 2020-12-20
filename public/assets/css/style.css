@@ -7,13 +7,22 @@ body {
 }
 
 h1 {
-  line-height: 4em;
+  font-size: 4em;
+  line-height: 2em;
+  font-weight: 900;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(0, 48, 73);
 }
 
+.burgerName {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
 #emptyAlert {
-  color: crimson;
+  font-size: 1.5em;
+  color: darkred;
+  font-weight: 900;
   line-height: 0.1em;
   display: none;
 }

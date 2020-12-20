@@ -5,25 +5,28 @@
         <table class="table">
           <thead>
             <tr>
-              <th colspan="2" scope="col">Burger list:</th>
+              <th class="burgerName" colspan="2" scope="col">Burger list:</th>
             </tr>
           </thead>
           <tbody>
+            {{#each ordered }}
 
             <tr>
               <th scope="row">
-
+                {{inc @index}}
                 <!-- BURGER NUMBER -->
               </th>
               <td>
-                <p>
-
+                <p class="burgerName">
+                  {{burger_name}}
                   <!-- BURGER CONTENT  -->
                 </p>
-                <button data-id="idFromDB" id="eatBurger" type="button" class="btn btn-secondary">Delete</button>
-                <button data-id="idFromDB" id="deleteFromList" type="button" class="btn btn-danger">DEVOUR IT</button>
+                <button data-id="{{id}}" type="button" class="btn btn-secondary deleteSelected">Delete</button>
+                <button data-id="{{id}}" type="button" class="btn btn-danger eatBurger">DEVOUR IT</button>
               </td>
             </tr>
+            {{/each}}
+            
             
           </tbody>
         </table>
@@ -43,11 +46,28 @@
         <table class="table">
           <thead>
             <tr>
-              <th colspan="2" scope="col">Burgers devoured:</th>
+              <th class="burgerName" colspan="2" scope="col">Burgers devoured:</th>
             </tr>
           </thead>
           <tbody>
+            {{#each devoured }}
+
             <tr>
+              <th scope="row">
+                {{inc @index}}
+                <!-- BURGER NUMBER -->
+              </th>
+              <td>
+                <p class="burgerName">
+                  {{burger_name}}
+                  <!-- BURGER CONTENT  -->
+                </p>
+                <button data-id="{{id}}" type="button" class="btn btn-danger anotherOne">ANOTHER ONE!</button>
+                <button data-id="{{id}}" type="button" class="btn btn-secondary deleteSelected">Delete</button>
+              </td>
+            </tr>
+            {{/each}}
+            {{!-- <tr>
               <th scope="row">
 
                 <!-- DEVOURED BURGER NUMBER -->
@@ -59,7 +79,7 @@
                 </p>
                 <button data-devoured-id="idFromDB" id="deleteDevoured" type="button" class="btn btn-secondary">Delete</button>
               </td>
-            </tr>
+            </tr> --}}
           </tbody>
         </table>
       </article>

@@ -1,4 +1,3 @@
-// const handlebars = require("express-handlebars");
 const orm = require("../config/orm");
 // Helper function for handlebars
 const inc = (value) => {
@@ -8,6 +7,7 @@ const inc = (value) => {
 const renderHTML = async (res) => {
   try {
     const dbResults = await orm.selectAll();
+    console.log("DB RESUUULST:", dbResults);
     res.render("index", { dbResults, helpers: {
       inc,
     }})

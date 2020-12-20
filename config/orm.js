@@ -14,12 +14,12 @@ const selectAll = () => {
 };
 
 
-const insertOne = (table, columnNames, toInsert) => {
+const insertOne = (toInsert) => {
   return new Promise((resolve, reject) => {
     connection.query(`
-    INSERT INTO ${table} (${columnNames})
+    INSERT INTO burgers (burger_name, devoured)
     VALUES 
-    ("${toInsert});`, (error, data) => {
+    ("${toInsert.burger_name}", ${toInsert.devoured});`, (error, data) => {
       if (error) {
         console.log("Error while saving to DB:", error);
         reject(error);
@@ -30,12 +30,12 @@ const insertOne = (table, columnNames, toInsert) => {
   })
 };
 
-const updateOne = (toUpdate) => {
+const updateOne = (data) => {
   return new Promise((resolve, reject) => {
     connection.query(`
-    UPDATE ${table}
-    SET devoured = true
-    WHERE id = "${toUpdate}";`, (error, data) => {
+    UPDATE burgers
+    SET devoured = ${data.devoured}
+    WHERE id = ${data.id};`, (error, data) => {
       if (error) {
         console.log("Error while updating DB:", error);
         reject(error)
@@ -46,10 +46,10 @@ const updateOne = (toUpdate) => {
   })
 };
 
-const deleteOne = (id) => {
+const deleteOne = (data) => {
   return new Promise((resolve, reject) => {
     connection.query(`
-    DELETE FROM burgers WHERE id = ${id};`, (error, data) => {
+    DELETE FROM burgers WHERE id = ${data.id};`, (error, data) => {
       if (error) {
         console.log("Error while updating DB:", error);
         reject(error)
@@ -63,6 +63,7 @@ const deleteOne = (id) => {
 module.exports = {
   selectAll,
   insertOne,
-  updateOne
+  updateOne,
+  deleteOne
 }
 
