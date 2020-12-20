@@ -1,8 +1,9 @@
-const { selectAll, insertOne, updateOne } = require("../config/orm");
-
-// Routes
-module.exports = function (app) {
+const orm = require("../config/orm");
 
 
-  
+module.exports = {
+  selectAll: function(){
+    return orm.selectAll("burgers");
+  }
 }
+

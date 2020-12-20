@@ -1,0 +1,67 @@
+<main class="container text-center">
+    <h1>Eat-Da-Burger</h1>
+    <section class="row">
+      <article class="col-lg-4 col-md-12 text-center">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" scope="col">Burger list:</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row">
+
+                <!-- BURGER NUMBER -->
+              </th>
+              <td>
+                <p>
+
+                  <!-- BURGER CONTENT  -->
+                </p>
+                <button data-id="idFromDB" id="eatBurger" type="button" class="btn btn-secondary">Delete</button>
+                <button data-id="idFromDB" id="deleteFromList" type="button" class="btn btn-danger">DEVOUR IT</button>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </article>
+      <article class="middle-col col-lg-4 col-md-12 text-center">
+        <p id="emptyAlert">We don't serve air, only burgers!</p>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Your burger:</span>
+          <input data-input="burgerName" type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm" />
+        </div>
+        <button id="addToList" type="button" class="btn btn-secondary">Add burger</button>
+        <button id="eatOnSave" type="button" class="btn btn-danger">Devour right away!</button>
+        <img src="/assets/img/burger.png" class="img-fluid" />
+      </article>
+      <article class="col-lg-4 col-md-12 text-center">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2" scope="col">Burgers devoured:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+
+                <!-- DEVOURED BURGER NUMBER -->
+              </th>
+              <td>
+                <p>
+
+                  <!-- DEVOURED BURGER -->
+                </p>
+                <button data-devoured-id="idFromDB" id="deleteDevoured" type="button" class="btn btn-secondary">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>

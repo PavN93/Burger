@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(148, 155, 130);
+}
+
+.middle-col {
+  padding-top: 20px;
+}
+
+h1 {
+  line-height: 4em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(0, 48, 73);
+}
+
+#emptyAlert {
+  color: crimson;
+  line-height: 0.1em;
+  display: none;
+}
