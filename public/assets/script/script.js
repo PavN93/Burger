@@ -9,7 +9,7 @@ const emptyInputAlert = $("#emptyAlert");
 // Add burger to list
 addBurgerBtn.on("click", function(event) {
   event.preventDefault();
-  if (inputBurger.val().length < 1) {
+  if (inputBurger.val().replace(/ /g, "").length < 1) {
     emptyInputAlert.show();
     return false;
   }
@@ -32,7 +32,7 @@ addBurgerBtn.on("click", function(event) {
 // Devour burger right on submit
 eatOnSaveBtn.on("click", function(event) {
   event.preventDefault();
-  if (inputBurger.val().length < 1) {
+  if (inputBurger.val().replace(/ /g, "").length < 1) {
     emptyInputAlert.show();
     return false;
   }
