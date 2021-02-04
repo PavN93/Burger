@@ -3,7 +3,7 @@ const express = require("express");
 var exphbs = require("express-handlebars");
 
 const app = express();
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.SV_PORT || 3030;
 
 app.use(express.json());
 app.use(express.static("public"));
