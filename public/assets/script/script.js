@@ -6,14 +6,6 @@ const anotherOneBtn = $(".anotherOne");
 const deleteBtn = $(".deleteSelected");
 const emptyInputAlert = $("#emptyAlert");
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/service-worker.js").then(reg => {
-      console.log("Our service worker file is installed", reg);
-    });
-  });
-}
-
 // Add burger to list
 addBurgerBtn.on("click", function(event) {
   event.preventDefault();
